@@ -68,36 +68,34 @@ img {
     
     border-bottom: 1px solid var(--border-header-color);
 }
-.header-container {
+.header__container {
     display: flex;
     align-items:center; 
-    width: 1200px;
-        margin-right: auto;
-        margin-left: auto;
-        padding-right: 15px;
-        padding-left: 15px;
+   
     }
 /* лого */
-.logo-link,
-.logo-link__header,
-.logo-link__footer {
+.logo {
 font-family: Raleway;
 font-weight: 700;
 font-size: 26px;
 line-height: 1.2;
 letter-spacing: 0.03em;
 text-decoration: none;
+color: var(--accent-color)
 }
 
-.logo-link {
-    color: var(--accent-color);
-}
 
-.logo-link__header {
+.logo__text {
+    font-family: Raleway;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.2;
+        letter-spacing: 0.03em;
+        text-decoration: none;
     color: var(--heder-logo-color);
 }
 
-.logo-link__footer {
+.logo__text--footer {
     color: var(--accent-test-color);
 }
 
@@ -439,7 +437,7 @@ text-decoration: none;
     display: flex; 
     align-items: baseline;
 }
-
+/* adress */
 .adress { 
     margin-top: 20px;
     margin-right: 70px;
@@ -448,17 +446,18 @@ text-decoration: none;
     line-height: 1.71;
     letter-spacing: 0.03em;  
 }
-.adress .text {
+.adress__text {
     color: var(--accent-test-color);
 }
-.adress .link {
+.adress__link {
     display: block;
     margin-top: 9px;
     color: var(--adress-color);
     text-decoration: none; 
 }
-.network .text,
-.form-text {
+
+.network__text,
+.form__text {
     margin-bottom: 20px;
     padding-bottom: 0px;
     font-weight: 700;
@@ -469,14 +468,15 @@ text-decoration: none;
     
      color: var(--accent-test-color);
 }
-.network .list {
+/* network */
+.network-list {
      display: flex;
 }
-.network .item:not(:last-child) {
+.network-list__item:not(:last-child) {
     margin-right: 10px;
 }
 
-.network .link {
+.network-list__link {
     display: flex;
     justify-content: center; 
     align-items: center;
@@ -487,13 +487,14 @@ text-decoration: none;
     transition: background-color var(--transform);
     
 }
- .network .icon {
-   fill: var(--accent-test-color);
-}
-.network .link:hover,
-.network .link:focus{
+.network-list__link:hover,
+.network-list__link:focus {
     background-color: var(--accent-color);
 }
+ .network-list__icon {
+   fill: var(--accent-test-color);
+}
+ /* footer form */
 .footer .form {
     display: block;
     margin-left: auto;
@@ -503,7 +504,7 @@ text-decoration: none;
     display: flex;
     
 }
-.footer-form-imput {
+.form-group__imput {
     margin-right: 12px;
     padding: 15px 16px;
     width: 358px;
@@ -516,7 +517,7 @@ text-decoration: none;
     border-radius: 4px;
     background-color: var(--footer-backgound-color);
 }
-.footer-form-btn {
+.form-group__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -534,12 +535,12 @@ text-decoration: none;
     border-radius: 4px;
     transition: background-color var(--transform);
 }
-.footer-form-btn:hover {
+.form-group__btn:hover {
     background-color: var(--hero-buton-hover);
 }
 
 
-.footer-form-icon {
+.form-group__icon {
     margin-left: 10px;
    fill: var(--accent-test-color);
 }
@@ -710,6 +711,10 @@ margin-right: 0px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding-top: 2px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
     width: 528px;
     height: 581px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -718,14 +723,14 @@ margin-right: 0px;
   
 }
 .modal .button{
+
    
-    
-    margin-left: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 8px;
-    margin-right: 8px;
+     margin-top: 8px;
+     margin-right: -32px;
+     margin-left: auto;
      width: 30px;
      height: 30px;
      background: var(--primary-backgound-color);
@@ -741,12 +746,9 @@ margin-right: 0px;
 }
 
  .modal .form { 
-    margin-top: 2px;
     margin-right: auto;
     margin-left: auto;
-    padding-right: 40px;
-    padding-bottom: 40px;
-    padding-left: 40px;
+ 
 
 }
 .form .text {
@@ -802,7 +804,7 @@ margin-right: 0px;
   
 
 }
-.form-input:hover +.form-icon,
+.form-input:hover + .form-icon,
 .form-input:focus + .form-icon {
     fill: var(--accent-color);
 }
@@ -810,7 +812,7 @@ margin-right: 0px;
 
 .form-field-textarea {
     display: block;
-    margin-bottom: 17px;
+  
 
 }
   .textarea {
